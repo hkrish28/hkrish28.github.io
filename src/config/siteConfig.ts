@@ -113,6 +113,15 @@ export const siteConfig = {
           category: "Cloud & Tools",
           items: ["AWS", "PCF", "Linux", "Kubernetes", "Git", "Bitbucket", "JIRA", "Docker", "Postman", "JMeter", "Terraform", "Figma"]
         }
+      ],
+      certifications: [
+        {
+          name: "Automating Real-World Tasks with Python",
+          provider: "Google via Coursera",
+          date: "Novemeber 2020",
+          link: "https://coursera.org/share/f103e7564253be99bb424abcd6e22b5b"
+        }
       ]
+      
   }
   

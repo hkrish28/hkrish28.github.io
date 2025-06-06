@@ -5,6 +5,7 @@ import { siteConfig } from '@/config/siteConfig'
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
 import Skills from '@/components/Skills'
+import Certifications from '@/components/Certifications'
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
       <Experience experience={siteConfig.experience} />
       <Education education={siteConfig.education} />
       <Skills skills={siteConfig.skills} />
+      <Certifications certifications={siteConfig.certifications} />
+
     </main>
   )
 }
