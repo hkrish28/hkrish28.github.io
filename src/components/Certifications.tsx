@@ -12,7 +12,7 @@ type Certification = {
 
 export default function Certifications({ certifications }: { certifications: Certification[] }) {
   return (
-    <Section title="Certifications" className="bg-white">
+    <Section title="Certifications" className="text-white">
       <motion.ul
         initial="hidden"
         whileInView="visible"
@@ -30,19 +30,19 @@ export default function Certifications({ certifications }: { certifications: Cer
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 }
             }}
-            className="border-l-4 border-indigo-500 pl-4"
+            className="border-l-4 border-indigo-400 pl-4"
           >
             <div className="flex justify-between items-center">
-              <h3 className="text-lg font-semibold">{cert.name}</h3>
-              <span className="text-sm text-gray-500">{cert.date}</span>
+              <h3 className="text-lg font-semibold text-indigo-300">{cert.name}</h3>
+              <span className="text-sm text-indigo-400">{cert.date}</span>
             </div>
-            <p className="text-sm text-gray-600">{cert.provider}</p>
+            <p className="text-sm text-indigo-200">{cert.provider}</p>
             {cert.link && (
               <a
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-indigo-600 text-sm underline mt-1 inline-block"
+                className="text-indigo-400 text-sm underline mt-1 inline-block"
               >
                 View Certificate
               </a>

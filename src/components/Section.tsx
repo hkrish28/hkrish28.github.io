@@ -1,4 +1,3 @@
-// components/Section.tsx
 'use client'
 
 import { motion } from 'framer-motion'
@@ -18,7 +17,9 @@ export default function Section({
   className?: string
 }) {
   return (
-    <section className={`py-24 px-6 ${className}`}>
+    <section
+      className={`py-24 px-6 text-white ${className}`}
+    >
       <motion.h2
         variants={fadeIn}
         initial="hidden"
@@ -29,7 +30,9 @@ export default function Section({
       >
         {title}
       </motion.h2>
-      <div className="max-w-5xl mx-auto">{children}</div>
+      <div className="max-w-5xl mx-auto backdrop-blur-sm bg-black/30 p-6 rounded-xl">
+        {children}
+      </div>
     </section>
   )
 }

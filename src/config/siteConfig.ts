@@ -1,7 +1,7 @@
 export const siteConfig = {
     hero: {
-      name: "Hari",
-      tagline: "I build delightful frontend experiences with modern tools like React, Tailwind, GSAP & more.",
+      name: "Harikrishnan U",
+      tagline: "Software Engineer | Full-Stack Developer",
     },
     projects: [
         {
