@@ -99,6 +99,20 @@ export const siteConfig = {
             "Courses: Principles of Programming Language, OOP, Data Structures & Algorithms"
           ]
         }
+      ],
+      skills: [
+        {
+          category: "Languages & Web Technologies",
+          items: ["React", "Java", "Python", "SQL", "NoSQL", "Node", "HTML", "CSS", "JavaScript", "Scala", "C/C++"]
+        },
+        {
+          category: "Frameworks & Databases",
+          items: ["Hadoop", "Spark", "TypeScript", "JUnit", "Jest", "MySQL", "MariaDB", "MongoDB", "Next.js", "TailwindCSS"]
+        },
+        {
+          category: "Cloud & Tools",
+          items: ["AWS", "PCF", "Linux", "Kubernetes", "Git", "Bitbucket", "JIRA", "Docker", "Postman", "JMeter", "Terraform", "Figma"]
+        }
       ]
   }
   

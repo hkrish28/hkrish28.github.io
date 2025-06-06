@@ -4,6 +4,7 @@ import About from '@/components/About'
 import { siteConfig } from '@/config/siteConfig'
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
+import Skills from '@/components/Skills'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <About content={siteConfig.about.content} />
       <Experience experience={siteConfig.experience} />
       <Education education={siteConfig.education} />
+      <Skills skills={siteConfig.skills} />
     </main>
   )
 }
