@@ -1,23 +1,16 @@
+'use client'
+
 import Hero from '@/components/Hero'
-import Projects from '@/components/Projects'
-import About from '@/components/About'
-import { siteConfig } from '@/config/siteConfig'
-import Experience from '@/components/Experience'
-import Education from '@/components/Education'
-import Skills from '@/components/Skills'
-import Certifications from '@/components/Certifications'
+import SectionsInfiniteScroller from '@/components/SectionsInfiniteScroll' // Your simplified infinite scroll navigator
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-indigo-100 via-white to-blue-100 text-gray-900">
-      <Hero name={siteConfig.hero.name} tagline={siteConfig.hero.tagline} />
-      <Projects projects={siteConfig.projects} />
-      <About content={siteConfig.about.content} />
-      <Experience experience={siteConfig.experience} />
-      <Education education={siteConfig.education} />
-      <Skills skills={siteConfig.skills} />
-      <Certifications certifications={siteConfig.certifications} />
-
+    <main className="min-h-screen bg-black text-white flex flex-col items-center">
+      <Hero name="Harikrishnan U" tagline="I build delightful frontend experiences..." />
+      
+      <div className="w-full max-w-4xl px-4 mt-[-4rem] z-10">
+        <SectionsInfiniteScroller />
+      </div>
     </main>
   )
 }
