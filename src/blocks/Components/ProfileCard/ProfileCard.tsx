@@ -4,6 +4,7 @@
 
 import React, { useEffect, useRef, useCallback, useMemo } from "react";
 import "./ProfileCard.css";
+import Image from "next/image";
 
 interface ProfileCardProps {
   avatarUrl: string;
@@ -48,7 +49,7 @@ const adjust = (
   fromMin: number,
   fromMax: number,
   toMin: number,
-  toMax: number,
+  toMax: number
 ): number =>
   round(toMin + ((toMax - toMin) * (value - fromMin)) / (fromMax - fromMin));
 
@@ -85,7 +86,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
       offsetX: number,
       offsetY: number,
       card: HTMLElement,
-      wrap: HTMLElement,
+      wrap: HTMLElement
     ) => {
       const width = card.clientWidth;
       const height = card.clientHeight;
@@ -101,7 +102,11 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
         "--pointer-y": `${percentY}%`,
         "--background-x": `${adjust(percentX, 0, 100, 35, 65)}%`,
         "--background-y": `${adjust(percentY, 0, 100, 35, 65)}%`,
-        "--pointer-from-center": `${clamp(Math.hypot(percentY - 50, percentX - 50) / 50, 0, 1)}`,
+        "--pointer-from-center": `${clamp(
+          Math.hypot(percentY - 50, percentX - 50) / 50,
+          0,
+          1
+        )}`,
         "--pointer-from-top": `${percentY / 100}`,
         "--pointer-from-left": `${percentX / 100}`,
         "--rotate-x": `${round(-(centerX / 5))}deg`,
@@ -118,7 +123,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
       startX: number,
       startY: number,
       card: HTMLElement,
-      wrap: HTMLElement,
+      wrap: HTMLElement
     ) => {
       const startTime = performance.now();
       const targetX = wrap.clientWidth / 2;
@@ -166,10 +171,10 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
         event.clientX - rect.left,
         event.clientY - rect.top,
         card,
-        wrap,
+        wrap
       );
     },
-    [animationHandlers],
+    [animationHandlers]
   );
 
   const handlePointerEnter = useCallback(() => {
@@ -195,12 +200,12 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
         event.offsetX,
         event.offsetY,
         card,
-        wrap,
+        wrap
       );
       wrap.classList.remove("active");
       card.classList.remove("active");
     },
-    [animationHandlers],
+    [animationHandlers]
   );
 
   useEffect(() => {
@@ -228,7 +233,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
       initialX,
       initialY,
       card,
-      wrap,
+      wrap
     );
 
     return () => {
@@ -251,11 +256,11 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
         "--icon": iconUrl ? `url(${iconUrl})` : "none",
         "--grain": grainUrl ? `url(${grainUrl})` : "none",
         "--behind-gradient": showBehindGradient
-          ? (behindGradient ?? DEFAULT_BEHIND_GRADIENT)
+          ? behindGradient ?? DEFAULT_BEHIND_GRADIENT
           : "none",
         "--inner-gradient": innerGradient ?? DEFAULT_INNER_GRADIENT,
-      }) as React.CSSProperties,
-    [iconUrl, grainUrl, showBehindGradient, behindGradient, innerGradient],
+      } as React.CSSProperties),
+    [iconUrl, grainUrl, showBehindGradient, behindGradient, innerGradient]
   );
 
   const handleContactClick = useCallback(() => {
@@ -273,7 +278,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
           <div className="pc-shine" />
           <div className="pc-glare" />
           <div className="pc-content pc-avatar-content">
-            <img
+            {/* <img
               className="avatar"
               src={avatarUrl}
               alt={`${name || "User"} avatar`}
@@ -282,19 +287,36 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                 const target = e.target as HTMLImageElement;
                 target.style.display = "none";
               }}
+            /> */}
+            <Image
+              className="avatar"
+              src={avatarUrl}
+              alt={`${name || "User"} avatar`}
+              width={100} // Specify the intrinsic width of the image (or estimated)
+              height={100} // Specify the intrinsic height of the image (or estimated)
+              priority={false} // Set to true for images above the fold that are critical for LCP
+              // You might want to use 'sizes' prop for responsive images if needed
+              // onError is generally not needed with Next.js Image as it handles broken images gracefully.
+              // If you still need specific error handling, you'd adapt it slightly.
             />
             {showUserInfo && (
               <div className="pc-user-info">
                 <div className="pc-user-details">
                   <div className="pc-mini-avatar">
-                    <img
-                      src={miniAvatarUrl || avatarUrl}
-                      alt={`${name || "User"} mini avatar`}
-                      loading="lazy"
+                    <Image
+                      src={miniAvatarUrl || avatarUrl} // The source URL for your image
+                      alt={`${name || "User"} mini avatar`} // Alt text for accessibility
+                      width={32} // **Required:** Set the intrinsic width of your mini avatar (adjust as needed)
+                      height={32} // **Required:** Set the intrinsic height of your mini avatar (adjust as needed)
+                      // priority={true} // Consider adding this if this mini avatar is critical for initial load
+                      // If `miniAvatarUrl` can be external, ensure you configure `next.config.js` with `images.domains`
                       onError={(e) => {
-                        const target = e.target as HTMLImageElement;
+                        // Note: onError behavior might be slightly different or less necessary with <Image />
+                        // as it handles broken images more gracefully.
+                        // If you need custom fallbacks, you might manage state to switch `src`.
+                        const target = e.target as HTMLImageElement; // Still good practice for TypeScript
                         target.style.opacity = "0.5";
-                        target.src = avatarUrl;
+                        target.src = avatarUrl; // Fallback to the larger avatar if mini fails
                       }}
                     />
                   </div>

@@ -3,7 +3,6 @@
 */
 
 'use client'
-
 import { useEffect, useRef, FC } from "react";
 import * as THREE from "three";
 import {
@@ -16,6 +15,7 @@ import {
 } from "postprocessing";
 
 interface Distortion {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   uniforms: Record<string, { value: any }>;
   getDistortion: string;
   getJS?: (progress: number, time: number) => THREE.Vector3;
@@ -489,6 +489,7 @@ class CarLights {
     const geometry = new THREE.TubeGeometry(curve, 40, 1, 8, false);
 
     const instanced = new THREE.InstancedBufferGeometry().copy(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       geometry as any,
     ) as THREE.InstancedBufferGeometry;
     instanced.instanceCount = options.lightPairsPerRoadWay * 2;
@@ -664,6 +665,7 @@ class LightsSticks {
     const options = this.options;
     const geometry = new THREE.PlaneGeometry(1, 1);
     const instanced = new THREE.InstancedBufferGeometry().copy(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       geometry as any,
     ) as THREE.InstancedBufferGeometry;
     const totalSticks = options.totalSideLightSticks;
@@ -821,7 +823,7 @@ class Road {
       20,
       segments,
     );
-
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let uniforms: Record<string, { value: any }> = {
       uTravelLength: { value: options.length },
       uColor: {
@@ -999,12 +1001,14 @@ class App {
   renderPass!: RenderPass;
   bloomPass!: EffectPass;
   clock: THREE.Clock;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   assets: Record<string, any>;
   disposed: boolean;
   road: Road;
   leftCarLights: CarLights;
   rightCarLights: CarLights;
   leftSticks: LightsSticks;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   fogUniforms: Record<string, { value: any }>;
   fovTarget: number;
   speedUpTarget: number;
