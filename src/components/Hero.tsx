@@ -34,7 +34,12 @@ export default function Hero({
             avatarUrl="/hari.png"
             showUserInfo={true}
             enableTilt={true}
-            onContactClick={() => console.log('Contact clicked')}
+            onContactClick={() => {
+                const contactSection = document.getElementById('Contact Me');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
           />
         </motion.div>
 

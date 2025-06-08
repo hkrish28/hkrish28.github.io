@@ -16,14 +16,11 @@ export default function Projects({ projects }: { projects: Project[] }) {
     <Section title="Projects" className="text-white">
       <div className="max-w-5xl mx-auto space-y-10">
         {projects.map((project, idx) => (
-          <div
-            key={idx}
-            className="border border-white/10 p-6 rounded-lg shadow-md bg-white/5 backdrop-blur-sm"
-          >
+          <div key={idx} className="project-card">
             <div className="flex justify-between items-start">
               <div>
-                <h3 className="text-xl font-bold text-white">{project.name}</h3>
-                <p className="text-sm text-white/70 mb-2">{project.period}</p>
+                <h3 className="item-heading text-white">{project.name}</h3>
+                <p className="item-period text-white/70 mb-2">{project.period}</p>
               </div>
               <div className="space-x-3">
                 {project.links?.demo && (
@@ -48,12 +45,12 @@ export default function Projects({ projects }: { projects: Project[] }) {
                 )}
               </div>
             </div>
-            <ul className="list-disc list-inside text-white/80 mt-2 space-y-1">
+            <ul className="list-text text-white/80 mt-2">
               {project.description.map((point, i) => (
                 <li key={i}>{point}</li>
               ))}
             </ul>
-            <div className="mt-3 text-sm text-white/70">
+            <div className="mt-3 list-text text-white/70">
               <strong>Stack:</strong> {project.techStack.join(', ')}
             </div>
           </div>

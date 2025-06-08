@@ -278,7 +278,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
           <div className="pc-shine" />
           <div className="pc-glare" />
           <div className="pc-content pc-avatar-content">
-            {/* <img
+            <img
               className="avatar"
               src={avatarUrl}
               alt={`${name || "User"} avatar`}
@@ -287,8 +287,8 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                 const target = e.target as HTMLImageElement;
                 target.style.display = "none";
               }}
-            /> */}
-            <Image
+            />
+            {/* <Image
               className="avatar"
               src={avatarUrl}
               alt={`${name || "User"} avatar`}
@@ -298,7 +298,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
               // You might want to use 'sizes' prop for responsive images if needed
               // onError is generally not needed with Next.js Image as it handles broken images gracefully.
               // If you still need specific error handling, you'd adapt it slightly.
-            />
+            /> */}
             {showUserInfo && (
               <div className="pc-user-info">
                 <div className="pc-user-details">

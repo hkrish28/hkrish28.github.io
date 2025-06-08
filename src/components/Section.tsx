@@ -7,26 +7,28 @@ const fadeIn = {
   visible: { opacity: 1, y: 0 },
 }
 
+type SectionProps = {
+  title: string
+  children: React.ReactNode
+  className?: string
+  id?: string
+}
+
 export default function Section({
   title,
   children,
   className = '',
-}: {
-  title: string
-  children: React.ReactNode
-  className?: string
-}) {
+  id,
+}: SectionProps) {
   return (
-    <section
-      className={`py-24 px-6 text-white ${className}`}
-    >
+    <section className={`py-24 px-6 text-white ${className}`} id={id || title}>
       <motion.h2
         variants={fadeIn}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
-        className="text-3xl font-semibold text-center mb-12"
+        className="section-heading"
       >
         {title}
       </motion.h2>

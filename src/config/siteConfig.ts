@@ -15,8 +15,8 @@ export const siteConfig = {
             "Implemented a mobile-friendly leaderboard and 7-day points trend chart using Recharts."
           ],
           links: {
-            repo: "https://github.com/your-username/ipl-fantasy", // Replace with actual
-            demo: "https://iplfantasy.vercel.app" // Replace with actual
+            repo: "https://github.com/hkrish28/ipl-fantasy-app", 
+            demo: "https://ipl-fantasy-app.vercel.app/" 
           }
         },
         {
@@ -30,7 +30,7 @@ export const siteConfig = {
             "Ensured software reliability with extensive JUnit testing."
           ],
           links: {
-            repo: "https://github.com/your-username/image-processor", // Replace with actual
+            repo: "https://github.com/hkrish28/image-manipulator", 
           }
         },
         {
@@ -43,13 +43,13 @@ export const siteConfig = {
             "Chefs can create recipes with automated dietary-tag assignment using stored procedures."
           ],
           links: {
-            repo: "https://github.com/your-username/digidine", // Replace with actual
+            repo: "https://github.com/hkrish28/DigiDine", 
           }
         }
       ],
     about: {
       content:
-        "I'm a frontend developer passionate about design, interaction, and smooth user experiences. I specialize in building polished UIs and micro-interactions that elevate products.",
+        "I am an experienced Full-Stack Software Engineer with four years of hands-on experience at JPMorgan Chase & Co., where I developed scalable web applications and cloud-integrated systems. I specialize in technologies such as React.js, Spring Boot, TypeScript, Python, Node.js, and Hadoop, and I have a strong foundation in data structures and algorithms. \nIn May 2025, I completed my Master of Science in Computer Science at Northeastern University, with a focus on distributed systems, cloud computing, and large-scale application design. I also hold a Bachelor of Technology in Computer Science from the National Institute of Technology Calicut.\nMy skills cover the entire development lifecycle, including user interface design, backend API development, and cloud deployment using AWS. I am passionate about building efficient, maintainable software and enjoy tackling challenging technical problems.",
     },
     experience: [
         {
