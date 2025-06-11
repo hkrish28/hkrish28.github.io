@@ -1,25 +1,33 @@
-import Section from './Section'
+'use client'
 
-type Project = {
-  name: string
-  techStack: string[]
-  period: string
-  description: string[]
-  links?: {
-    repo?: string
-    demo?: string
-  }
-}
+import { useRouter } from "next/navigation"; // Next.js 13+ app router useRouter
+import Section from "./Section";
+import { Project } from "@/types/projectTypes";
 
 export default function Projects({ projects }: { projects: Project[] }) {
+  const router = useRouter();
+
   return (
     <Section title="Projects" className="text-white">
       <div className="max-w-5xl mx-auto space-y-10">
-        {projects.map((project, idx) => (
-          <div key={idx} className="project-card">
+        {projects.map((project) => (
+          <div
+            key={project.slug}
+            onClick={() => router.push(`/projects/${project.slug}`)}
+            className="project-card cursor-pointer hover:bg-white/5 transition-colors duration-200 rounded-lg p-1"
+            role="link"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                router.push(`/projects/${project.slug}`);
+              }
+            }}
+          >
             <div className="flex justify-between items-start">
               <div>
-                <h3 className="item-heading text-white">{project.name}</h3>
+                <h3 className="item-heading text-white hover:underline">
+                  {project.name}
+                </h3>
                 <p className="item-period text-white/70 mb-2">{project.period}</p>
               </div>
               <div className="space-x-3">
@@ -29,6 +37,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-indigo-300 text-sm underline"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     Live
                   </a>
@@ -39,6 +48,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-indigo-300 text-sm underline"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     Code
                   </a>
@@ -51,11 +61,11 @@ export default function Projects({ projects }: { projects: Project[] }) {
               ))}
             </ul>
             <div className="mt-3 list-text text-white/70">
-              <strong>Stack:</strong> {project.techStack.join(', ')}
+              <strong>Stack:</strong> {project.techStack.join(", ")}
             </div>
           </div>
         ))}
       </div>
     </Section>
-  )
+  );
 }

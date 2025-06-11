@@ -33,16 +33,16 @@ export default function Certifications({ certifications }: { certifications: Cer
             className="border-l-4 border-indigo-400 pl-4"
           >
             <div className="flex justify-between items-center">
-              <h3 className="text-lg font-semibold text-indigo-300">{cert.name}</h3>
-              <span className="text-sm text-indigo-400">{cert.date}</span>
+              <h3 className="item-heading">{cert.name}</h3>
+              <span className="item-period">{cert.date}</span>
             </div>
-            <p className="text-sm text-indigo-200">{cert.provider}</p>
+            <p className="item-degree">{cert.provider}</p>
             {cert.link && (
               <a
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-indigo-400 text-sm underline mt-1 inline-block"
+                className="text-indigo-400 text-lg underline mt-1 inline-block"
               >
                 View Certificate
               </a>
