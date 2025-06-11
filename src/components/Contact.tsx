@@ -12,7 +12,16 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    alert('Message sent! Thank you.')
+
+    const subject = encodeURIComponent(`Message from ${form.name}`)
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+    )
+    const mailtoLink = `mailto:harikrishnan.u2810@gmail.com?subject=${subject}&body=${body}`
+
+    window.location.href = mailtoLink
+
+    // Optional: reset form after redirect
     setForm({ name: '', email: '', message: '' })
   }
 

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ShootingStars } from "@/components/ui/shooting-stars";
+import { StarsBackground } from "@/components/ui/stars-background";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="absolute inset-0 -z-10 fixed">
+          <ShootingStars />
+          <StarsBackground />
+        </div>
+                {/* Content Layer (Scrollable, takes up available space, on top of background) */}
+                <div className="relative z-0 flex-grow overflow-y-auto">
+          {children}
+        </div>
+        {/* {children} */}
       </body>
     </html>
   );

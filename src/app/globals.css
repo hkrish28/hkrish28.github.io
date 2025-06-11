@@ -48,7 +48,7 @@ body {
 }
 
 .item-degree {
-  @apply mt-2 font-medium text-indigo-300 text-lg; /* bigger + indigo tint */
+  @apply mt-2 font-medium text-gray-400 text-lg; /* bigger */
 }
 
 .list-text {
