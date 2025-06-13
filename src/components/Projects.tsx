@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation"; // Next.js 13+ app router useRouter
 import Section from "./Section";
 import { Project } from "@/types/projectTypes";
 
+/* This component is deprecated for ExpandableProjectCards*/
 export default function Projects({ projects }: { projects: Project[] }) {
   const router = useRouter();
 

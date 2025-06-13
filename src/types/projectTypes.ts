@@ -4,6 +4,7 @@ export type Project = {
     techStack: string[];
     period: string;
     description: string[];
+    thumbnail?: string;
     links?: {
       repo?: string;
       demo?: string;
@@ -17,5 +18,6 @@ export type Project = {
       future?: string;
       extra?: string;
     };
+    tags: string[]; // e.g., ['web', 'mobile', 'ai']
   };
   
