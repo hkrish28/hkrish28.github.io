@@ -41,6 +41,7 @@ export const projects: Project[] = [
       demo: "https://ipl-fantasy-app.vercel.app/",
     },
     screenshots: [],
+    tags: ["Web", "Firebase", "Typescript", "Nextjs", "Tailwind"],
   },
   {
     slug: "smart-inventory",
@@ -75,6 +76,7 @@ export const projects: Project[] = [
       demo: "https://www.figma.com/proto/k6Ot74P2mEYumVSXtourqA/Smart-Inventory?node-id=0-1&t=MRzHHGkw9aNwEpFk-1",
     },
     screenshots: [],
+    tags: ["Design", "Figma", "UX", "UI"],
   },
   {
     slug: "graph-diameter-sssp-mapreduce",
@@ -116,6 +118,7 @@ export const projects: Project[] = [
       repo: "https://github.com/hkrish28/graph-diameter-sssp-mapreduce",
     },
     screenshots: [],
+    tags: ["Mapreduce", "Hadoop", "AWS", "Java", "Distributed"],
   },
   {
     slug: "lyric-shuffle",
@@ -158,6 +161,7 @@ export const projects: Project[] = [
       repo: "https://github.com/hkrish28/Lyric-Shuffle",
     },
     screenshots: [],
+    tags: ["Android", "Java", "Mobile", "SQLite", "Supabase"],
   },
   {
     slug: "formula-1-result-analysis-prediction",
@@ -201,6 +205,7 @@ export const projects: Project[] = [
       repo: "https://github.com/hkrish28/f1-track-specialists",
     },
     screenshots: [],
+    tags: ["Data Science", "Machine Learning", "R", "Python"],
   },
   {
     slug: "image-processor-application",
@@ -234,6 +239,7 @@ export const projects: Project[] = [
       repo: "https://github.com/hkrish28/image-manipulator",
     },
     screenshots: [],
+    tags: ["Java", "Java Swing", "Design Patterns", "MVC", "Junit"],
   },
   {
     name: "DigiDine: Personal Chef and Nutritionist",
@@ -264,6 +270,7 @@ export const projects: Project[] = [
       extra:
         "Built with a team of 3; I focused on front-end, stored procedures and integration.",
     },
+    tags: ["Web", "React", "Flask", "MySQL", "Docker"],
   },
   {
     slug: "attendance-management-image-processing",
@@ -297,5 +304,6 @@ export const projects: Project[] = [
       repo: "https://github.com/hkrish28/AttendanceMgmtAI"
     },
     screenshots: [], 
+    tags: ["Python", "Django", "OpenCV", "FaceNet", "PostgreSQL", "Machine Learning", "Image Processing", "AI"]
 }
 ];
