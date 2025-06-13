@@ -62,7 +62,7 @@ export default function Hero({
               <Linkedin className="w-6 h-6 hover:text-indigo-400 transition-colors" />
             </Link>
             <Link
-              href="/resume.pdf"
+              href="/Resume.pdf"
               target="_blank"
               className="flex items-center gap-2 bg-indigo-600 text-white text-sm px-4 py-2 rounded-full hover:bg-indigo-500 transition-colors"
             >
