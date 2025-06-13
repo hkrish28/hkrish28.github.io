@@ -4,6 +4,7 @@ export type Project = {
     techStack: string[];
     period: string;
     description: string[];
+    thumbnail?: string;
     links?: {
       repo?: string;
       demo?: string;

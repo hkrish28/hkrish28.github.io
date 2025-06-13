@@ -29,15 +29,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="absolute inset-0 -z-10 fixed">
+        <div className="absolute inset-0 fixed -z-50"> 
           <ShootingStars />
           <StarsBackground />
         </div>
-                {/* Content Layer (Scrollable, takes up available space, on top of background) */}
-                <div className="relative z-0 flex-grow overflow-y-auto">
+
+        <div className="relative z-10 flex-grow overflow-y-auto">
           {children}
         </div>
-        {/* {children} */}
       </body>
     </html>
   );
