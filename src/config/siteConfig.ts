@@ -116,6 +116,12 @@ export const siteConfig = {
       ],
       certifications: [
         {
+          name:"AWS Educate Introduction to Generative AI",
+          provider: "Amazon Web Services Training and Certification",
+          date: "June 2025",
+          link: "https://www.credly.com/badges/23980d71-1582-4653-a69a-f81d34671370"
+        },
+        {
           name: "Automating Real-World Tasks with Python",
           provider: "Google via Coursera",
           date: "Novemeber 2020",

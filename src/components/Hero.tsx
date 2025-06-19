@@ -16,7 +16,7 @@ export default function Hero({
   content: string
 }) {
   return (
-    <Section title="" className="text-white">
+    <Section title="" id="About" className="text-white">
       <div className="flex flex-col md:flex-row items-center gap-10">
         {/* Profile Card (Left) */}
         <motion.div

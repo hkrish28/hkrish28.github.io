@@ -7,7 +7,7 @@ type SkillCategory = {
 
 export default function Skills({ skills }: { skills: SkillCategory[] }) {
   return (
-    <Section title="Technical Skills" className="text-white">
+    <Section title="Skills" className="text-white">
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
         {skills.map((skill, idx) => (
           <div key={idx}>

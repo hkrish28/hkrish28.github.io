@@ -96,8 +96,8 @@ export function ExpandableProjectCards({ projects }: ExpandableProjectCardsProps
   };
 
 
-  // --- Existing Modal Logic ---
-  const projectsSectionId = "projects-section"; // ID for the Projects section to scroll to
+  
+  const projectsSectionId = "Projects"; // ID for the Projects section to scroll to
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
