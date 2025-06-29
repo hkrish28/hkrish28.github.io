@@ -2,6 +2,44 @@ import { Project } from "@/types/projectTypes";
 
 export const projects: Project[] = [
   {
+    slug: "mental-health-navigator",
+    name: "Mental Health Navigator",
+    techStack: [
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "Google Gemini API",
+      "Docker",
+    ],
+    period: "June 2025",
+    description: [
+      "A web-based conversational assistant to help users identify and navigate mental health resources.",
+      "Provides a safe, anonymous space for users to articulate their feelings.",
+      "Features a guided AI assistant that listens and suggests relevant categories of care.",
+    ],
+    details: {
+      overview:
+        "This project is a web-based conversational assistant designed to help users identify and navigate potential mental health resources. It uses a React frontend, a Node.js/Express backend, and the Google Gemini API for its conversational AI capabilities.",
+      why: "The application provides a safe, anonymous space for users to articulate their feelings. A guided AI assistant listens empathetically and suggests relevant categories of care, such as therapy, psychiatry, or peer support, based on the conversation.",
+      learnings:
+        "This project involved building a full-stack application with a React frontend and a Node.js/Express backend. It also provided experience with Docker for containerization and the Google Gemini API for AI-powered conversation.",
+      achievements: [
+        "Successfully built and containerized a full-stack application.",
+        "Integrated a conversational AI to provide helpful resources to users.",
+      ],
+      future:
+        "Future improvements could include expanding the resource database, adding more sophisticated conversation flows, and implementing user feedback mechanisms.",
+      extra:
+        "This is a proof-of-concept application and is not a substitute for professional medical advice, diagnosis, or treatment.",
+    },
+    links: {
+      repo: "https://github.com/hkrish28/mental-health-navigator",
+    },
+    screenshots: [],
+    tags: ["React", "Node.js", "AI", "Docker", "LLM", "Tailwind" ],
+  },
+  {
     slug: "ipl-fantasy-web-app",
     name: "IPL Fantasy Web App",
     techStack: [
@@ -12,7 +50,7 @@ export const projects: Project[] = [
       "Recharts",
       "Framer Motion",
     ],
-    period: "June 2025",
+    period: "May 2025",
     description: [
       "Built a responsive UI with Firebase Auth/Firestore for real-time competitions and player assignments.",
       "Automated data ingestion and leaderboard updates via Cloud Functions; deployed on Vercel.",
@@ -41,7 +79,7 @@ export const projects: Project[] = [
       demo: "https://ipl-fantasy-app.vercel.app/",
     },
     screenshots: [],
-    tags: ["Web", "Firebase", "Typescript", "Nextjs", "Tailwind"],
+    tags: ["Firebase", "TypeScript", "Nextjs", "Tailwind"],
   },
   {
     slug: "smart-inventory",
@@ -76,7 +114,7 @@ export const projects: Project[] = [
       demo: "https://www.figma.com/proto/k6Ot74P2mEYumVSXtourqA/Smart-Inventory?node-id=0-1&t=MRzHHGkw9aNwEpFk-1",
     },
     screenshots: [],
-    tags: ["Design", "Figma", "UX", "UI"],
+    tags: ["Figma", "UI/UX"],
   },
   {
     slug: "graph-diameter-sssp-mapreduce",
@@ -118,7 +156,7 @@ export const projects: Project[] = [
       repo: "https://github.com/hkrish28/graph-diameter-sssp-mapreduce",
     },
     screenshots: [],
-    tags: ["Mapreduce", "Hadoop", "AWS", "Java", "Distributed"],
+    tags: ["Mapreduce", "Hadoop", "AWS", "Java"],
   },
   {
     slug: "lyric-shuffle",
@@ -161,7 +199,7 @@ export const projects: Project[] = [
       repo: "https://github.com/hkrish28/Lyric-Shuffle",
     },
     screenshots: [],
-    tags: ["Android", "Java", "Mobile", "SQLite", "Supabase"],
+    tags: ["Android", "Java", "PostgreSQL", "Supabase"],
   },
   {
     slug: "formula-1-result-analysis-prediction",
@@ -205,7 +243,7 @@ export const projects: Project[] = [
       repo: "https://github.com/hkrish28/f1-track-specialists",
     },
     screenshots: [],
-    tags: ["Data Science", "Machine Learning", "R", "Python"],
+    tags: ["Machine Learning", "R", "Python"],
   },
   {
     slug: "image-processor-application",
@@ -239,7 +277,7 @@ export const projects: Project[] = [
       repo: "https://github.com/hkrish28/image-manipulator",
     },
     screenshots: [],
-    tags: ["Java", "Java Swing", "Design Patterns", "MVC", "Junit"],
+    tags: ["Java"],
   },
   {
     name: "DigiDine: Personal Chef and Nutritionist",
@@ -270,7 +308,7 @@ export const projects: Project[] = [
       extra:
         "Built with a team of 3; I focused on front-end, stored procedures and integration.",
     },
-    tags: ["Web", "React", "Flask", "MySQL", "Docker"],
+    tags: ["React", "Flask", "MySQL", "Docker"],
   },
   {
     slug: "attendance-management-image-processing",
@@ -304,6 +342,6 @@ export const projects: Project[] = [
       repo: "https://github.com/hkrish28/AttendanceMgmtAI"
     },
     screenshots: [], 
-    tags: ["Python", "Django", "OpenCV", "FaceNet", "PostgreSQL", "Machine Learning", "Image Processing", "AI"]
+    tags: ["Python", "Django", "OpenCV", "PostgreSQL", "Machine Learning", "AI"]
 }
 ];
